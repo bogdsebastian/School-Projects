@@ -15,3 +15,12 @@ int Repo::findOffer(const Offer& off) const{
 	}
 	return -1;
 }
+int Repo::removeOffer(const Offer& off) {
+	int index = findOffer(off);
+	if (index > -1)
+	{
+		offers.erase(offers.begin() + index);
+		return 1;
+	}
+	return -1;
+}

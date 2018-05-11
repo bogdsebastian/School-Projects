@@ -18,7 +18,7 @@ public:
 	void add(const Offer&);
 	// returns first appearance's index in the container , -1 otherwise
 	int findOffer(const Offer&) const;
-
+	int removeOffer(const Offer&) ;
 private:
 	std::vector<Offer> offers;
 	

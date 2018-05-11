@@ -24,7 +24,7 @@ void testOffer() {
 }  
 
 void testOffers() {
-	// test Repo::add() , getSize() , getCapacity() and findOffer()
+	// test Repo::add() , getSize() , getCapacity() , findOffer() and removeOffer()
 	Repo repository = Repo();
 	Offer off1;
 	off1.setDestination("berlin");
@@ -41,5 +41,11 @@ void testOffers() {
 	assert(repository.getCapacity() == 6);
 	assert(repository.findOffer(off1) == 0);
 	assert(repository.findOffer(off2) == -1);
+	repository.add(Offer("true", "true", "true",1));
+	assert(repository.removeOffer(Offer("true", "true", "true", 1))>-1);
+	assert(repository.getSize() == 5);
+	assert(repository.getCapacity() == 6);
+	assert(repository.removeOffer(off2)==-1);
+
 
 }
