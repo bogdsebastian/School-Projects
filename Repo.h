@@ -19,6 +19,7 @@ public:
 	// returns first appearance's index in the container , -1 otherwise
 	int findOffer(const Offer&) const;
 	int removeOffer(const Offer&) ;
+	int modifyOffer(const Offer& off,const Offer& newOffer);
 private:
 	std::vector<Offer> offers;
 	

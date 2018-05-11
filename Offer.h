@@ -19,14 +19,15 @@ public:
 	void setDestination(std::string newDestination);
 	void setType(std::string newType);
 
-	int getPrice() { return price; }
-	std::string getName() { return nameOffer; }
-	std::string getDestination() { return destination; }
-	std::string getType() { return type; }
+	int getPrice() const { return price; }
+	std::string getName() const { return nameOffer; }
+	std::string getDestination() const { return destination; }
+	std::string getType() const { return type; }
 
 	// equals operator , true the members of the 2 Offers are the same
 	// marked both the parameter and current instance to be const since neither of them should change
 	bool operator ==(const Offer& ) const;
+	
 	std::string toStringOffer()const;
 private:
 	std::string nameOffer;

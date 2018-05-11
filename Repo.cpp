@@ -24,3 +24,12 @@ int Repo::removeOffer(const Offer& off) {
 	}
 	return -1;
 }
+int Repo::modifyOffer(const Offer& off,const Offer& newOffer) {
+	int index = findOffer(off);
+	if (index > -1)
+	{
+		offers[index].setName(newOffer.getName());
+		return index;
+	}
+	return -1;
+}

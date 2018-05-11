@@ -46,6 +46,7 @@ void testOffers() {
 	assert(repository.getSize() == 5);
 	assert(repository.getCapacity() == 6);
 	assert(repository.removeOffer(off2)==-1);
-
-
+	repository.add(off2);
+	assert(repository.modifyOffer(off2, Offer("czech", "Czech offer", "tour",20)) ==5 );
+	assert(repository.modifyOffer(off2, Offer("czech", "Czech offer", "tour", 21)) == -1);
 }
